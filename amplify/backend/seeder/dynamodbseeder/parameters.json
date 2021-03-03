@@ -1,0 +1,9 @@
+{
+  "GraphQLAPIId": {
+   "Fn::GetAtt": [
+            "apimyapi",
+            "Outputs.GraphQLAPIIdOutput"
+         ]
+ },
+  "DataSeeds": "[{ \"id\": \"Clean your room\"}, { \"id\": \"Do your homework\" }, { \"id\": \"go to bed\" }]"
+}

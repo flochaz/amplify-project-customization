@@ -1,0 +1,6 @@
+{
+  "pluginId": "amplify-typescript-function-runtime-provider",
+  "functionRuntime": "nodejs",
+  "useLegacyBuild": true,
+  "defaultEditorFile": "src/index.js"
+}
