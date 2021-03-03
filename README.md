@@ -2,11 +2,20 @@
 
 ## Add typescript support for function
 
-### How
+### Options
+
+* Use function build option https://docs.amplify.aws/cli/function/build-options
+* Use a custom plugin
+
+### Custom plugin version
 
 For that one I simply copied the official  [amplify-nodejs-function-runtime-provider](https://github.com/aws-amplify/amplify-cli/tree/master/packages/amplify-nodejs-function-runtime-provider) stripped all the dependencies I didn't needed and fixed the code that is preventing `amplify function build` and therefore `amplify push`, to support Typescript build:
 
 https://github.com/aws-amplify/amplify-cli/blob/master/packages/amplify-nodejs-function-runtime-provider/src/utils/legacyBuild.ts#L15 
+
+=> 
+
+https://github.com/flochaz/amplify-project-customization/blob/main/plugin/amplify-nodejs-function-runtime-provider/src/utils/legacyBuild.ts#L23
 
 ### Usage
 
@@ -101,7 +110,11 @@ https://github.com/aws-amplify/amplify-cli/blob/master/packages/amplify-nodejs-f
         ```
         amplify push
         ```
-        
+
+
+PS: This method can be used as well to extend/modify standard function template as well by forking [amplify-nodejs-function-template-provider](https://github.com/aws-amplify/amplify-cli/tree/master/packages/amplify-nodejs-function-template-provider)
+
+
 ## Add DynamoDB seeder
 
 
